@@ -26,7 +26,7 @@ Starting Cerebro for elasticsearch with the options  -Dhosts.0.host=http://url1:
 ```
 
 ------
-#Original README.md
+# Original README.md
 ## Description
 Docker image to run cerebro [Elasticsearch 5.x](https://www.elastic.co/products/elasticsearch) web admin tool that replaces [Kopf](https://github.com/lmenezes/elasticsearch-kopf).
 
