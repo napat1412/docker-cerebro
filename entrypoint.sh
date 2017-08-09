@@ -16,7 +16,6 @@ setup_es_endpoint() {
 
 setup_es_endpoint
 
-echo "ES_URLS $ES_URLS"
 echo "Starting Cerebro for elasticsearch with the options $OPTS"
 CMD="$CEREBRO_HOME/bin/cerebro $OPTS"
 $CMD
