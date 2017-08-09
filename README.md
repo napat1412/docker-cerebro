@@ -1,3 +1,32 @@
+# docker-cerebro
+Docker image to run cerebro for Elasticsearch 5.x (https://www.elastic.co/products/elasticsearch) web admin tool that replaces [Kopf](https://github.com/lmenezes/elasticsearch-kopf).
+
+Cerebro project: https://github.com/lmenezes/cerebro
+
+## ENV
+$ES_URLS      List of elasticsearch url which seperate by comma. (e.g. http://url1:9200,http://url2:9200)
+
+## Build
+Run the following command.
+```bash
+$ docker build -t local/docker-cerebro  .
+```
+
+## Run with ENV
+In example, you can run start with simple docker by using this command
+```
+$ docker run -d --name cerebro -p 9000:9000 -e ES_URLS=http://url1:9200,http://url2:9200 local/docker-cerebro
+```
+
+## Output: log
+```
+Starting Cerebro for elasticsearch with the options  -Dhosts.0.host=http://url1:9200 -Dhosts.1.host=http://url2:9200
+[info] play.api.Play - Application started (Prod)
+[info] p.c.s.NettyServer - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+```
+
+------
+#Original README.md
 ## Description
 Docker image to run cerebro [Elasticsearch 5.x](https://www.elastic.co/products/elasticsearch) web admin tool that replaces [Kopf](https://github.com/lmenezes/elasticsearch-kopf).
 
